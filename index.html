@@ -1,0 +1,122 @@
+
+<html>
+<head>
+
+</head>
+
+<body>
+<button onclick=start()>start</button>
+
+<script type="text/javascript" src="Tonejs-Instruments.js"></script>
+<script src="https://unpkg.com/tone@13.8.34/build/Tone.js"></script>
+<script type="text/javascript" src="Synths.js"></script>
+<script type="text/javascript" src="chords.js"></script>
+
+<script>
+
+
+Tone.Transport.bpm.value = 70;
+Tone.Master.volume.values = -15;
+
+
+var lowPass = new Tone.Filter({
+              "type":"lowpass",
+              "frequency":1000
+          });
+
+var impulse = new Tone.Buffer("/impulse/stairwell.wav")
+const convolver = new Tone.Convolver(impulse);
+convolver.wet.value= .1;
+
+
+var feedbackDelay = new Tone.FeedbackDelay("8n", 0.5);
+feedbackDelay.wet.value= .1;
+
+var basscutEQ = new Tone.EQ3(-2, 0, 0);
+
+
+
+
+var instruments = SampleLibrary.load({
+    instruments: ["enoSynth","WarmSmokyPiano"]
+    });
+
+
+var mainSound = instruments["enoSynth"];
+mainSound.chain(convolver,basscutEQ,Tone.Master);
+mainSound.volume.value = -25;
+
+
+var mainSound2 = instruments["WarmSmokyPiano"];
+
+    mainSound2.chain(convolver,basscutEQ,Tone.Master);
+    mainSound2.volume.value = -15;
+
+var introProg = D2AC ;
+
+//console.log(introProg);
+
+function start() {
+
+
+
+
+const mainIntro = new Tone.Part(function(time, value){
+
+    mainSound.triggerAttackRelease(value.note,value.duration,time,);
+    mainSound2.triggerAttackRelease(value.note,value.duration,time,);
+
+  }, introProg  ).start(0);
+
+
+
+
+  //mainIntro.autostart = false;
+  mainIntro.loop = true;
+  mainIntro.loopEnd = "4m";
+  //mainIntro.stop("8m");
+/*
+const mainMiddle = new Tone.Part(function(time, chord){
+
+      mainSound.triggerAttackRelease(chord, "1m", time);
+    }, [["0:0:0", ["A2","C3","E3","G3"]], ["1m",["G2","G3","B3","D3"]],
+    ["2m",["D2","F3","A3","C4"]], ["3m", ["D2","F3","A3","C4"]]]).start("8m");
+  //fractTrips.dispose();
+    mainMiddle.autostart = false;
+    mainMiddle.loop = true;
+    mainMiddle.loopEnd = "4m";
+    mainMiddle.stop("16m");
+  //mainchords.start("24m");
+
+const mainEnd = new Tone.Part(function(time, chord){
+      mainSound.triggerAttackRelease(chord, "1m", time);
+    }, [["0m", ["D2","F3","A3","C4"]], ["1m",["C2","E3","G3","C3"]],
+    ["2m",["F2","F3","A3","C4"]], ["3m", ["G2","G3","B3","D3"]]]).start("16m");
+    //fractTrips.dispose();
+      mainEnd.autostart = false;
+      mainEnd.loop = true;
+      mainEnd.loopEnd = "4m";
+        mainEnd.stop("24m");
+*/
+
+
+
+
+Tone.Transport.start("+0.3");
+}
+
+
+Tone.Buffer.on('load', function() {
+     // play instrument sound
+console.log("buffersloaded");
+start();
+
+     });
+
+
+
+
+  </script>
+
+</body>
+</html>
