@@ -15,7 +15,7 @@
 <script>
 
 
-Tone.Transport.bpm.value = 70;
+Tone.Transport.bpm.value = 120;
 Tone.Master.volume.values = -15;
 
 
@@ -52,7 +52,7 @@ var mainSound2 = instruments["WarmSmokyPiano"];
     mainSound2.chain(convolver,basscutEQ,Tone.Master);
     mainSound2.volume.value = -15;
 
-var introProg = DCF2 ;
+var introProg = DGAC ;
 
 //console.log(introProg);
 
@@ -64,7 +64,7 @@ function start() {
 const mainIntro = new Tone.Part(function(time, value){
 
     mainSound.triggerAttackRelease(value.note,value.duration,time,);
-    //mainSound2.triggerAttackRelease(value.note,value.duration,time,);
+    mainSound2.triggerAttackRelease(value.note,value.duration,time,);
 
   }, introProg  ).start(0);
 
