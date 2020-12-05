@@ -24,68 +24,52 @@ var GfM = ["G2","F3","A3","C4"];
 
 
 
-
-
-///happy notes
-
-
-///TONIC
-///2 note progs
-//v=10
-
-///
+//CB
 const CBA2 = [{ time: "0m", note: CMo, duration: "1m" },
            { time: "1m", note: Bm, duration: "1m" },
            { time: "2m", note: Am, duration: "2m" }]
-///
+
 
 const CBAF = [{ time: "0m", note: CMo, duration: "1m" },
            { time: "1m", note: Bm, duration: "1m" },
            { time: "2m", note: Am, duration: "1m" },
          { time: "3m", note: FM, duration: "1m" }]
-///
+
 const CBF2 = [{ time: "0m", note: CMo, duration: "1m" },
            { time: "1m", note: Bm, duration: "1m" },
            { time: "2m", note: FM, duration: "2m" }]
-///
+//CE
 
-
-
-
-//v=8
 const CEGf2 = [{ time: "0m", note: CM, duration: "1m" },
            { time: "1m", note: Em, duration: "1m" },
            { time: "2m", note: GfM, duration: "2m" }]
-///
+
 const CEF2 = [{ time: "0m", note: CM, duration: "1m" },
            { time: "1m", note: Em, duration: "1m" },
            { time: "2m", note: FM, duration: "2m" }]
-///
+//CF
+
 const C2F2 = [{ time: "0m", note: CM, duration: "2m" },
          { time: "2m", note: FM, duration: "2m" }]
-///
+
 
 
 const CGF2 = [{ time: "0m", note: CM, duration: "1m" },
            { time: "1m", note: GM, duration: "1m" },
            { time: "2m", note: FM, duration: "2m" }]
-///
+
 const CGFGf = [{ time: "0m", note: CM, duration: "1m" },
               { time: "1m", note: GM, duration: "1m" },
               { time: "2m", note: FM, duration: "1m" },
               { time: "3m", note: GfM, duration: "1m" }]
-///
+
 const CGA2 = [{ time: "0m", note: CM, duration: "1m" },
            { time: "1m", note: GM, duration: "1m" },
            { time: "2m", note: Am, duration: "2m" }]
-///
 
-//v=8
 
-//SUBMEDIANT
-//dramatic notes
+//AC
 
-///AC
 const ACF_112 =     [{ time: "0m", note: Am, duration: "1m" },
             { time: "1m", note: CM, duration: "1m" },
             { time: "2m", note: FM, duration: "2m" }]
@@ -104,8 +88,36 @@ const ACGF = [{ time: "0m", note: Am, duration: "1m" },
             { time: "1m", note: CM, duration: "1m" },
             { time: "2m", note: GM, duration: "1m" },
             { time: "3m", note: FM, duration: "1m" }]
+//AD
+const AD_22 =     [{ time: "0m", note: Am7, duration: "2m" },
+            { time: "2m", note: Dm7, duration: "2m" }]
+//
+const ADC_211 =     [{ time: "0m", note: Am, duration: "2m" },
+            { time: "2m", note: Dm7, duration: "1m" },
+          { time: "3m", note: CMo, duration: "1m" },]
+//
 
-///AF
+const ADCF =     [{ time: "0m", note: Am, duration: "1m" },
+            { time: "1m", note: Dm7, duration: "1m" },
+          { time: "2m", note: CMo, duration: "1m" },
+        { time: "3m", note: FM, duration: "1m" },]
+//
+
+const ADG_211 =     [{ time: "0m", note: Am7, duration: "2m" },
+            { time: "2m", note: Dm7, duration: "1m" },
+          { time: "3m", note: GfM, duration: "1m" },]
+//
+
+//AE
+const AECD = [{ time: "0m", note: Am, duration: "1m" },
+            { time: "1m", note: Em, duration: "1m" },
+            { time: "2m", note: CM, duration: "1m" },
+            { time: "3m", note: Dm, duration: "1m" }]
+///
+
+
+
+//AF
 
 const AFC_112= [{ time: "0m", note: Am7, duration: "1m" },
             { time: "1m", note: FM, duration: "1m" },
@@ -115,14 +127,13 @@ const AFCG= [{ time: "0m", note: Am7, duration: "1m" },
             { time: "1m", note: FM, duration: "1m" },
             { time: "2m", note: CM, duration: "1m" },
             { time: "3m", note: GM, duration: "1m" }]
-///
 
 
 const AFD7= [{ time: "0m", note: Am, duration: "1m" },
             { time: "1m", note: FM, duration: "1m" },
             { time: "2m", note: Dm7, duration: "2m" }]
 
-///AG
+//AG
 const AGC2 = [{ time: "0m", note: Am, duration: "1m" },
           { time: "1m", note: GM, duration: "1m" },
           { time: "2m", note: CM, duration: "2m" }]
@@ -141,7 +152,7 @@ const AGFG = [{ time: "0m", note: Am, duration: "1m" },
                   { time: "1m", note: GM, duration: "1m" },
                   { time: "2m", note: FM, duration: "1m" },
                   { time: "3m", note: GfM, duration: "1m" }]
-//v=4
+
 
 
 const AGFD = [{ time: "0m", note: Am, duration: "1m" },
@@ -158,19 +169,6 @@ const AGD7_112 = [{ time: "0m", note: Am, duration: "1m" },
 const AED7_112 = [{ time: "0m", note: Am, duration: "1m" },
             { time: "1m", note: Em, duration: "1m" },
             { time: "2m", note: Dm7, duration: "2m" }]
-
-///AE
-const AECD = [{ time: "0m", note: Am, duration: "1m" },
-            { time: "1m", note: Em, duration: "1m" },
-            { time: "2m", note: CM, duration: "1m" },
-            { time: "3m", note: Dm, duration: "1m" }]
-///
-
-
-
-
-
-
 
 
 
@@ -211,8 +209,7 @@ const FABD = [{ time: "0m", note: FM, duration: "1m" },
 ///
 
 
-///FC
-
+//FC
 
 const FC_22 = [{ time: "0m", note: CM, duration: "2m" },
          { time: "2m", note: FM, duration: "2m" }]
@@ -227,12 +224,12 @@ const F7CGf_112 = [{ time: "0m", note: FM, duration: "1m" },
 ///
 
 
-///FD
+//FD
 
 const F7D7_22 = [{ time: "0m", note: FM7, duration: "2m" },
          { time: "2m", note: Dm7, duration: "2m" }]
 ///
-///FDA
+//FDA
 const F7D7A_211 = [{ time: "0m", note: FM7, duration: "2m" },
          { time: "2m", note: Dm7, duration: "1m" },
        { time: "3m", note: Am, duration: "1m" }]
@@ -248,14 +245,12 @@ const FD7A7G = [{ time: "0m", note: FM, duration: "1m" },
             { time: "3m", note: GM, duration: "1m" }]
 ///
 
-// NOTE:
 const FD7A7C = [{ time: "0m", note: FM, duration: "1m" },
             { time: "1m", note: Dm7, duration: "1m" },
             { time: "2m", note: Am7, duration: "1m" },
             { time: "3m", note: CM, duration: "1m" }]
-///valence: 1, weight: 0
 
-///FDC
+//FDC
 const F7D7C_211 = [{ time: "0m", note: FM7, duration: "2m" },
          { time: "2m", note: Dm7, duration: "1m" },
        { time: "3m", note: CMo, duration: "1m" }]
@@ -278,7 +273,7 @@ const FDCG = [{ time: "0m", note: FM, duration: "1m" },
          { time: "3m", note: GM, duration: "1m" }]
 ///
 
-///FDG
+//FDG
 
 const FDG_112 = [{ time: "0m", note: FM, duration: "1m" },
          { time: "1m", note: Dm7, duration: "1m" },
@@ -326,7 +321,7 @@ const FEAG = [{ time: "0m", note: FM, duration: "1m" },
        { time: "2m", note: Am, duration: "1m" },
      { time: "3m", note: GM, duration: "1m" }]
 ///
-///FG
+//FG
 const FGA2 = [{ time: "0m", note: FM, duration: "1m" },
          { time: "1m", note: GM, duration: "1m" },
        { time: "2m", note: Am, duration: "2m" }]
@@ -382,7 +377,7 @@ const FGCA = [{ time: "0m", note: FM, duration: "1m" },
 const FGD_112 = [{ time: "0m", note: FM, duration: "1m" },
          { time: "1m", note: GM, duration: "1m" },
        { time: "2m", note: Dm, duration: "2m" }]
-///FGfD7_112
+
 const FGD_pf7_112 = [{ time: "0m", note: FM, duration: "1m" },
          { time: "1m", note: GfM, duration: "1m" },
        { time: "2m", note: Dm7, duration: "2m" }]
@@ -473,17 +468,17 @@ const D7F7_22 = [{ time: "0m", note: Dm7, duration: "2m" },
 const D7F7A_112 = [{ time: "0m", note: Dm7, duration: "1m" },
          { time: "1m", note: FM7, duration: "1m" },
        { time: "2m", note: Am, duration: "2m" }]
-///
+
 const D7F7AG = [{ time: "0m", note: Dm7, duration: "1m" },
          { time: "1m", note: FM7, duration: "1m" },
        { time: "2m", note: Am, duration: "1m" },
      { time: "3m", note: GM, duration: "1m" }]
-///
+
 const D7F7AC = [{ time: "0m", note: Dm7, duration: "1m" },
          { time: "1m", note: FM7, duration: "1m" },
        { time: "2m", note: Am, duration: "1m" },
      { time: "3m", note: CM, duration: "1m" }]
-///
+
 
 //DG
 
