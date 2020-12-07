@@ -49,12 +49,12 @@ const CEF2 = [{ time: "0m", note: CM, duration: "1m" },
            { time: "2m", note: FM, duration: "2m" }]
 //CF
 
-const C2F2 = [{ time: "0m", note: CM, duration: "2m" },
+const CF_22 = [{ time: "0m", note: CM, duration: "2m" },
          { time: "2m", note: FM, duration: "2m" }]
 
 
 
-const CGF2 = [{ time: "0m", note: CM, duration: "1m" },
+const CGF_112 = [{ time: "0m", note: CM, duration: "1m" },
            { time: "1m", note: GM, duration: "1m" },
            { time: "2m", note: FM, duration: "2m" }]
 
@@ -128,10 +128,10 @@ const AFCG= [{ time: "0m", note: Am7, duration: "1m" },
             { time: "2m", note: CM, duration: "1m" },
             { time: "3m", note: GM, duration: "1m" }]
 
-
+////cut
 const AFD7= [{ time: "0m", note: Am, duration: "1m" },
             { time: "1m", note: FM, duration: "1m" },
-            { time: "2m", note: Dm7, duration: "2m" }]
+            { time: "2m", note: Dm, duration: "2m" }]
 
 //AG
 const AGC2 = [{ time: "0m", note: Am, duration: "1m" },
